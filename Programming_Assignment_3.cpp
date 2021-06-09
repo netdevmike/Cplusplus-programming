@@ -46,14 +46,14 @@ int main()
     // function calls
     // call getData() by passing values as reference
     getData(marital_status, num_Persons, gross_Salary, pension_contri);
-    // call taxAmount() function in_order to compute the taxable income
+    // call taxAmount() function to calculate the taxable income
     taxable_Income = taxAmount(marital_status, num_Persons, gross_Salary, pension_contri);
-    // call getFederal_Tax() function to calcuate the federal tax depending
+    // call getFederal_Tax() function to calculate the federal tax depending
 
     // on taxable income
     federal_tax = getFederal_Tax(taxable_Income);
 
-    //Print the details
+    //Print details
     cout << "\nFederal Tax details of a person: " << endl;
     cout << "Marital Status: " << marital_status << endl;
     cout << "Number of Persons in the family: " << num_Persons << endl;
