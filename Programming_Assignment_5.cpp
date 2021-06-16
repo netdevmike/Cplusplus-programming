@@ -1,5 +1,8 @@
 /* 
+#1 on page 890  of C++ Programming. 
 Redo Programming Exercise 5 of Chapter 8 using dynamic arrays.
+
+The program prompts a user to enter the number of characters in the string which is stored in a dynamic array of type char. The program then changes all characters in the array to upper case and returns the new string to the user.
 */
 
 // header files
