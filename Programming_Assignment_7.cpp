@@ -47,7 +47,7 @@ double getdata(string mess)
         }  
         catch(int)
         {
-            cout<<"invalid number entered\n";
+            cout<<"You have entered an invalid value\n";
             n=0;
         }
 
