@@ -179,7 +179,7 @@ void stockList::printBySymbol() // Printing Stock List by Symbol
 
 void stockList::printByGain() // Printing Stock List by Gain
 {
-   cout << "\XXXXXXXXXXXXXXXXXXX FIRST INVESTOR'S HAVEN XXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
+   cout << "\nXXXXXXXXXXXXXXXXXXX FIRST INVESTOR'S HAVEN XXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
         cout << "XXXXXXXXXXXXXXXXXXX    FINANCIAL REPORT     XXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
         cout << "XXXXXXXXXXXXXXXXXXX        GAIN/LOSS        XXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
         cout << "\nSTOCK           TODAY                    PREVIOUS PERCENT" << endl;
