@@ -203,7 +203,7 @@ public:
 
        void print_Result()
        {
-              cout << "Stock name is " << stck_symbol << endl;
+              cout << "Stock name: " << stck_symbol << endl;
        }
 
        void show_different_prices()
@@ -219,7 +219,7 @@ public:
 
        void show_Totalnumber_of_shares()
        {
-              cout << "Number of share is " << Totalnumber_of_shares << endl;
+              cout << "Number of share(s) is " << Totalnumber_of_shares << endl;
        }
 
        bool operator> (Stock &cStock)
@@ -311,11 +311,11 @@ int main()
 
        stock_array.sort_Alph();
 
-       cout << "*************Welcome to FIH*****************" << endl;
+       cout << "**************Welcome to FIH******************" << endl;
        cout << "*************Financial Report*****************" << endl;
-       cout << "Stock Today Previous Precent " << endl;
-       cout << "Symbol Open Close High Low Close Gain Volume" << endl;
-       cout << "------ ----- ----- ----- ----- -------- ------- ------" << endl;
+       cout << "Stock              Today                  Previous Percent" << endl;
+       cout << "Symbol   Open    Close    High     Low    Close     Gain        Volume" << endl;
+       cout << "------   -----   -----    -----    ----- -------- -------      ------" << endl;
 
        stock_array.print_Result();
 
