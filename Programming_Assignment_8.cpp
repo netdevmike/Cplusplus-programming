@@ -299,7 +299,7 @@ int main()
 
        if (!infile)
        {
-              cout << "Unable to open file StockData.txt. so Exiting from program ";
+              cout << "Unable to open file StockData.txt, Program Exiting" << endl; 
               return 0;
        }
 
@@ -311,7 +311,7 @@ int main()
 
        stock_array.sort_Alph();
 
-       cout << "**************Welcome to FIH******************" << endl;
+       cout << "**********First Investor's Heaven*************" << endl;
        cout << "*************Financial Report*****************" << endl;
        cout << "Stock              Today                  Previous Percent" << endl;
        cout << "Symbol   Open    Close    High     Low    Close     Gain        Volume" << endl;

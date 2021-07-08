@@ -60,19 +60,20 @@ To do so, add a member variable, an array, to hold the indices of the stock list
 c. Write a program that uses these two classes to automate the company’s analysis of stock data.
 */
 
+// header files
 #include <iostream>//include for input-output stream library
 #include <fstream>//include for file stream library
 #include <iomanip>//include for io manipulation library
 #include <vector>//include for vector library
 #include<string> //include for string library
 #include<algorithm>//include for algorithm library
-#include "stockType.h"//header file which has all the declaration about stock Type objects
-#include "stockList.h" //header file which has all the declaration about stock List objects
+#include "stockType.h"//header file for stock Type objects declaration
+#include "stockList.h" //header file for stcok List objects declaration
 using namespace std;
 
 const int a = 5;
-int flag =0; // Flag for the file checking
-void getData(stockList& list) //Function to get data from file and save it in the stock type object
+int flag =0; // Flag for file checking
+void getData(stockList& list) //Function to get data from file and save it to stock type object
 {
    ifstream infile;
    string fileName;
@@ -85,20 +86,18 @@ void getData(stockList& list) //Function to get data from file and save it in th
    int       shares;
 
    stockType temp;
-   cout<<"HOME WORK4: CURRENT DAY STOCK ANALYSER"<<endl;
-   cout<<"WELCOME TO OHRYRO STOCK CONSULTANTS"<<endl;
-   cout<<"PLEASE ENTER YOUR STOCK DATA FILE NAME"<<endl;
-   getline(cin,fileName);// Gets file nam from user
+   cout<<"Please enter the stock data file name"<<endl;
+   getline(cin,fileName);// Gets file name from user
    infile.open(fileName);// Opens file
-   if (!infile) // To throw error for file unavailability
+   if (!infile) // returns error if file entered does not exist
    {
-       cout << "FILE NOT EXISTS. PLEASE ENTER A CORRECT FILE NAME. PROGRAM TERMINATED" << endl;
+       cout << "The file you entered does not exist" << endl;
        flag=5;
    }
    else
    {
        infile >> symbol;
-       while (infile) // Moving data from file to stock inturn stock list
+       while (infile) // Move data from file to stock inturn stock list
        {
            infile >> OpenPrice >> ClosePrice >> tHigh >> tLow >> yClose >> shares;
            temp.setStockInfo(symbol,OpenPrice,ClosePrice,tHigh,tLow,yClose,shares);
@@ -111,16 +110,16 @@ void getData(stockList& list) //Function to get data from file and save it in th
 
 int main()
 {
-   stockList stockList; // creating stock list object
+   stockList stockList; // create stock list object
    cout << fixed << showpoint;
    cout << setprecision(2);
-   getData(stockList); // copying dat a from file to the stcoklist object
+   getData(stockList); // copy data a from file to the stcoklist object
    if(flag==0)
    {
-       stockList.sortStockList();// Sorting the input data
-       stockList.printBySymbol();//Printing by sort list by symbol
+       stockList.sortStockList();// Sort input data
+       stockList.printBySymbol();//Print by sort list by symbol
        cout << endl;
-       stockList.printByGain();//Printing dat by sorted list by gain
+       stockList.printByGain();//Print data by sorted list by gain
    }
    return 0;
 }
